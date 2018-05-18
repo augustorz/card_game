@@ -11,7 +11,7 @@
       </a>
     </div>
     <div :class="['btn-align', { 'show-btn': isSelected }]">
-      <a href="javascript:void(0);" class="btn btn__default" v-on:click="submit">
+      <a href="javascript:void(0);" class="btn btn__default" v-on:click.once="submit">
         <span class="btn__content">Confirmar</span>
       </a>
     </div>

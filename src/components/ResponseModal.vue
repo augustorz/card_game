@@ -32,7 +32,7 @@ export default {
         'feedback',
         'isCorrect',
         'isWrong'
-    ]
+    ],
 }
 </script>
 

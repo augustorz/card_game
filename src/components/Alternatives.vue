@@ -22,6 +22,8 @@
 <script>
 import axios from 'axios';
 import ResponseModal from './ResponseModal.vue'
+import successAudio from '@/assets/audio/success.mp3'
+import errorAudio from '@/assets/audio/error.mp3'
 
 export default {
     name: "Alternatives",
@@ -56,9 +58,11 @@ export default {
         }).then(response => {
           if (this.id === response.data.correctAnswer) {
             this.response = "Resposta Correta!";
+            new Audio(successAudio).play()
             this.isCorrect = true;
           } else {
             this.response = "Resposta Incorreta!";
+            new Audio(errorAudio).play()
             this.isWrong = true;
           }
           this.feedback = response.data.feedback
